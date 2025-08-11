@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Employee Salary Statement</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form class="salary-form" oninput="calculateSalary()">
+    <h2>Employee Salary Calculator</h2>
+    <label>Employee Name
+      <input id="empName" type="text" placeholder="Enter your name">
+    </label>
+    <label>Basic Salary
+      <input id="basic" type="number" value="0">
+    </label>
+    <label>HRA
+      <input id="hra" type="number" value="0">
+      <label>Allowances
+        <input id="allowances" type="number" value="0">
+      </label>
+      <label>Other Earnings
+        <input id="otherEarnings" type="number" value="0">
+      </label>
+      <label>Provident Funds
+        <input id="pf" type="number" value="0">
+      </label>
+      <label>Professional Tax
+        <input id="ptax" type="number" value="0">
+      </label>
+      <label>Other Deductions
+        <input id="otherDeductions" type="number" value="0">
+      </label>
+      <div class="results">
+        <div><b>Total Earnings:</b>₹<span id="totalEarnings">0</span></div>
+        <div><b>Total Deductions:</b>₹<span id="totalDeductions">0</span></div>
+        <div><b>Net Salary:</b>₹<span id="netSalary">0</span></div>
+      </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+
+</html>
