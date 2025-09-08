@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><title>Reverse String Function</title><link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css"></head>
+<body>
+  <div class="childContainer">
+    <h1>Program to reverse a string using function</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Reverse String Function&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Reverse a String&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;text&quot; id=&quot;strInput&quot; placeholder=&quot;Enter text&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;button onclick=&quot;showReverse()&quot;&gt;Reverse&lt;/button&gt;
+&nbsp; &lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; function reverseString(s) {
+&nbsp; &nbsp; &nbsp; return s.split(&quot;&quot;).reverse().join(&quot;&quot;);
+&nbsp; &nbsp; }
+&nbsp; &nbsp; function showReverse() {
+&nbsp; &nbsp; &nbsp; const s = document.getElementById('strInput').value;
+&nbsp; &nbsp; &nbsp; document.getElementById('output').innerText = &quot;Reversed: &quot; + reverseString(s);
+&nbsp; &nbsp; }
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+  <h2>Reverse a String</h2>
+  <input class="input" type="text" id="strInput" placeholder="Enter text"><br><br>
+  <button onclick="showReverse()">Reverse</button>
+  <p id="output"></p>
+  </div>
+  <script>
+    function reverseString(s) {
+      return s.split("").reverse().join("");
+    }
+    function showReverse() {
+      const s = document.getElementById('strInput').value;
+      document.getElementById('output').innerText = "Reversed: " + reverseString(s);
+    }
+  </script>
+</body>
+</html>

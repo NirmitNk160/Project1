@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Let vs Const</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+
+<body>
+  <div class="childContainer">
+    <h1>Program to demonstrate let vs const in JavaScript</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Let vs Const&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h2&gt;Using const and let variables in operations:&lt;/h2&gt;
+  &lt;script&gt;
+    const pi = 3.14;
+    let radius = 5;
+    let area = pi * radius * radius;
+
+    document.write(&quot;Radius: &quot; + radius + &quot;&lt;br&gt;&quot;);
+    document.write(&quot;Area of circle: &quot; + area + &quot;&lt;br&gt;&quot;);
+
+    radius = 7; // changing variable
+    area = pi * radius * radius;
+    document.write(&quot;New radius: &quot; + radius + &quot;&lt;br&gt;&quot;);
+    document.write(&quot;Updated area: &quot; + area + &quot;&lt;br&gt;&quot;);
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Using const and let variables in operations:</h2>
+    <script>
+      const pi = 3.14;
+      let radius = 5;
+      let area = pi * radius * radius;
+      
+      document.write("Radius: " + radius + "<br>");
+      document.write("Area of circle: " + area + "<br>");
+      
+      radius = 7; // changing variable
+      area = pi * radius * radius;
+      document.write("New radius: " + radius + "<br>");
+      document.write("Updated area: " + area + "<br>");
+    </script>
+  </div>
+</body>
+
+</html>

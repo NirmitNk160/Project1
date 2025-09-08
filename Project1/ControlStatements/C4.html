@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ternary Operator with Input Box</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+<body>
+  <div class="childContainer">
+    <h1>Program to Check voting eligibility</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Ternary Operator with Input Box&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;Check voting eligibility&lt;/h2&gt;
+&lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;ageInput&quot; placeholder=&quot;Enter your age&quot;&gt;&lt;br&gt;&lt;br&gt;
+&lt;button onclick=&quot;checkEligibility()&quot;&gt;Check&lt;/button&gt;
+&lt;p id=&quot;result&quot;&gt;&lt;/p&gt;
+
+&lt;script&gt;
+  function checkEligibility() {
+    let age = Number(document.getElementById('ageInput').value);
+    let eligible = (age &gt;= 18) ? &quot;Eligible to vote&quot; : &quot;Not eligible to vote&quot;;
+    document.getElementById('result').innerText = &quot;Age: &quot; + age + &quot; - &quot; + eligible;
+  }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Check voting eligibility</h2>
+    <input class="input" type="number" id="ageInput" placeholder="Enter your age"><br><br>
+    <button onclick="checkEligibility()">Check</button>
+    <p id="result"></p>
+  </div>
+
+<script>
+  function checkEligibility() {
+    let age = Number(document.getElementById('ageInput').value);
+    let eligible = (age >= 18) ? "Eligible to vote" : "Not eligible to vote";
+    document.getElementById('result').innerText = "Age: " + age + " - " + eligible;
+  }
+</script>
+</body>
+</html>

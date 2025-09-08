@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head><title>Max of Three Function</title><link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css"></head>
+<body>
+  <div class="childContainer">
+    <h1>Program to find maximum of three numbers using function</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Max of Three Function&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Find Maximum of Three Numbers&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;numA&quot; placeholder=&quot;First number&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;numB&quot; placeholder=&quot;Second number&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;numC&quot; placeholder=&quot;Third number&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;button onclick=&quot;showMax()&quot;&gt;Find Max&lt;/button&gt;
+&nbsp; &lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; function maxOfThree(a, b, c) {
+&nbsp; &nbsp; &nbsp; return Math.max(a, b, c);
+&nbsp; &nbsp; }
+&nbsp; &nbsp; function showMax() {
+&nbsp; &nbsp; &nbsp; const a = Number(document.getElementById('numA').value);
+&nbsp; &nbsp; &nbsp; const b = Number(document.getElementById('numB').value);
+&nbsp; &nbsp; &nbsp; const c = Number(document.getElementById('numC').value);
+&nbsp; &nbsp; &nbsp; document.getElementById('output').innerText = &quot;Maximum: &quot; + maxOfThree(a, b, c);
+&nbsp; &nbsp; }
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Find Maximum of Three Numbers</h2>
+    <input class="input" type="number" id="numA" placeholder="First number"><br><br>
+    <input class="input" type="number" id="numB" placeholder="Second number"><br><br>
+    <input class="input" type="number" id="numC" placeholder="Third number"><br><br>
+    <button onclick="showMax()">Find Max</button>
+    <p id="output"></p>
+  </div>
+  <script>
+    function maxOfThree(a, b, c) {
+      return Math.max(a, b, c);
+    }
+    function showMax() {
+      const a = Number(document.getElementById('numA').value);
+      const b = Number(document.getElementById('numB').value);
+      const c = Number(document.getElementById('numC').value);
+      document.getElementById('output').innerText = "Maximum: " + maxOfThree(a, b, c);
+    }
+  </script>
+</body>
+</html>

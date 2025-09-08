@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head><title>Basic For...of Loop</title><link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css"></head>
+<body>
+  <div class="childContainer">
+    <h1>Program to display each item of an array using for...of loop</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Basic For...of Loop&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Show Array Items (for...of)&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;text&quot; id=&quot;arrInput&quot; placeholder=&quot;Item1,Item2,Item3&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;button onclick=&quot;showItems()&quot;&gt;Show&lt;/button&gt;
+&nbsp; &lt;p id=&quot;result&quot;&gt;&lt;/p&gt;
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; function showItems() {
+&nbsp; &nbsp; &nbsp; let arr = document.getElementById('arrInput').value.split(',');
+&nbsp; &nbsp; &nbsp; let out = &quot;&quot;;
+&nbsp; &nbsp; &nbsp; for(let item of arr) {
+&nbsp; &nbsp; &nbsp; &nbsp; out += item.trim() + &quot; &quot;;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; document.getElementById('result').innerText = out.trim();
+&nbsp; &nbsp; }
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Show Array Items (for...of)</h2>
+    <input class="input" type="text" id="arrInput" placeholder="Item1,Item2,Item3"><br><br>
+    <button onclick="showItems()">Show</button>
+    <p id="result"></p>
+  </div>
+  <script>
+    function showItems() {
+      let arr = document.getElementById('arrInput').value.split(',');
+      let out = "";
+      for(let item of arr) {
+        out += item.trim() + " ";
+      }
+      document.getElementById('result').innerText = out.trim();
+    }
+  </script>
+</body>
+</html>

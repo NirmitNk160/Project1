@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Logical Operators - Interactive</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+<body>
+  <div class="childContainer">
+    <h1>Program For Logical Operations</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Logical Operators - Interactive&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Logical Operations&lt;/h2&gt;
+  &lt;label for=&quot;aInput&quot;&gt;Enter value for a (true or false):&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;aInput&quot; placeholder=&quot;true or false&quot; class=&quot;input&quot;&gt;&lt;br&gt;&lt;br&gt;
+  &lt;label for=&quot;bInput&quot;&gt;Enter value for b (true or false):&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;bInput&quot; placeholder=&quot;true or false&quot; class=&quot;input&quot;&gt;&lt;br&gt;&lt;br&gt;
+  &lt;button onclick=&quot;calculateLogical()&quot;&gt;Calculate&lt;/button&gt;
+  &lt;pre id=&quot;result&quot;&gt;&lt;/pre&gt;
+  
+  &lt;script&gt;
+    function calculateLogical() {
+      const aRaw = document.getElementById('aInput').value.trim().toLowerCase();
+      const bRaw = document.getElementById('bInput').value.trim().toLowerCase();
+      const resultEl = document.getElementById('result');
+      const toBoolean = (val) =&gt; {
+        if (val === 'true') return true;
+        if (val === 'false') return false;
+        return null; // invalid input
+      };
+      const a = toBoolean(aRaw);
+      const b = toBoolean(bRaw);
+      if (a === null || b === null) {
+        resultEl.textContent = &quot;Please enter 'true' or 'false' for both a and b.&quot;;
+        return;
+      }
+      let output = &quot;&quot;;
+      output += `a &amp;&amp; b : ${a &amp;&amp; b}\n`;
+      output += `a || b : ${a || b}\n`;
+      output += `!a : ${!a}\n`;
+      resultEl.textContent = output;
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Logical Operations</h2>
+    <label for="aInput">Enter value for a (true or false):</label>
+    <input type="text" id="aInput" placeholder="true or false" class="input"><br><br>
+    <label for="bInput">Enter value for b (true or false):</label>
+    <input type="text" id="bInput" placeholder="true or false" class="input"><br><br>
+    <button onclick="calculateLogical()">Calculate</button>
+    <pre id="result"></pre>
+  </div>
+
+  <script>
+    function calculateLogical() {
+      const aRaw = document.getElementById('aInput').value.trim().toLowerCase();
+      const bRaw = document.getElementById('bInput').value.trim().toLowerCase();
+      const resultEl = document.getElementById('result');
+      const toBoolean = (val) => {
+        if (val === 'true') return true;
+        if (val === 'false') return false;
+        return null; // invalid input
+      };
+      const a = toBoolean(aRaw);
+      const b = toBoolean(bRaw);
+      if (a === null || b === null) {
+        resultEl.textContent = "Please enter 'true' or 'false' for both a and b.";
+        return;
+      }
+      let output = "";
+      output += `a && b : ${a && b}\n`;
+      output += `a || b : ${a || b}\n`;
+      output += `!a : ${!a}\n`;
+      resultEl.textContent = output;
+    }
+  </script>
+</body>
+
+</html>

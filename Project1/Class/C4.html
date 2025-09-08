@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head><title>BankAccount Class</title><link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css"></head>
+<body>
+  <div class="childContainer">
+    <h1>Program to perform bank account operations</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;BankAccount Class&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Bank Account Operations&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;depositAmount&quot; placeholder=&quot;Deposit Amount&quot;&gt;
+&nbsp; &lt;button onclick=&quot;deposit()&quot;&gt;Deposit&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;withdrawAmount&quot; placeholder=&quot;Withdraw Amount&quot;&gt;
+&nbsp; &lt;button onclick=&quot;withdraw()&quot;&gt;Withdraw&lt;/button&gt;
+&nbsp; &lt;p&gt;Current Balance: &lt;span id=&quot;balance&quot;&gt;0&lt;/span&gt;&lt;/p&gt;
+
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; class BankAccount {
+&nbsp; &nbsp; &nbsp; constructor() {
+&nbsp; &nbsp; &nbsp; &nbsp; this.balance = 0;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; deposit(amount) {
+&nbsp; &nbsp; &nbsp; &nbsp; this.balance += amount;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; withdraw(amount) {
+&nbsp; &nbsp; &nbsp; &nbsp; if(amount &gt; this.balance) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert(&quot;Insufficient funds&quot;);
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return false;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; &nbsp; this.balance -= amount;
+&nbsp; &nbsp; &nbsp; &nbsp; return true;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; getBalance() {
+&nbsp; &nbsp; &nbsp; &nbsp; return this.balance;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; const account = new BankAccount();
+
+&nbsp; &nbsp; function deposit() {
+&nbsp; &nbsp; &nbsp; const amt = Number(document.getElementById('depositAmount').value);
+&nbsp; &nbsp; &nbsp; if(isNaN(amt) || amt &lt;= 0) {
+&nbsp; &nbsp; &nbsp; &nbsp; alert(&quot;Enter valid deposit amount&quot;);
+&nbsp; &nbsp; &nbsp; &nbsp; return;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; account.deposit(amt);
+&nbsp; &nbsp; &nbsp; updateBalance();
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; function withdraw() {
+&nbsp; &nbsp; &nbsp; const amt = Number(document.getElementById('withdrawAmount').value);
+&nbsp; &nbsp; &nbsp; if(isNaN(amt) || amt &lt;= 0) {
+&nbsp; &nbsp; &nbsp; &nbsp; alert(&quot;Enter valid withdrawal amount&quot;);
+&nbsp; &nbsp; &nbsp; &nbsp; return;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; if(account.withdraw(amt)) {
+&nbsp; &nbsp; &nbsp; &nbsp; updateBalance();
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; function updateBalance() {
+&nbsp; &nbsp; &nbsp; document.getElementById('balance').innerText = account.getBalance();
+&nbsp; &nbsp; }
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+
+    <h2>Bank Account Operations</h2>
+    <input class="input" type="number" id="depositAmount" placeholder="Deposit Amount">
+    <button onclick="deposit()">Deposit</button><br><br>
+    <input class="input" type="number" id="withdrawAmount" placeholder="Withdraw Amount">
+    <button onclick="withdraw()">Withdraw</button>
+    <p>Current Balance: <span id="balance">0</span></p>
+  </div>
+
+  <script>
+    class BankAccount {
+      constructor() {
+        this.balance = 0;
+      }
+      deposit(amount) {
+        this.balance += amount;
+      }
+      withdraw(amount) {
+        if(amount > this.balance) {
+          alert("Insufficient funds");
+          return false;
+        }
+        this.balance -= amount;
+        return true;
+      }
+      getBalance() {
+        return this.balance;
+      }
+    }
+
+    const account = new BankAccount();
+
+    function deposit() {
+      const amt = Number(document.getElementById('depositAmount').value);
+      if(isNaN(amt) || amt <= 0) {
+        alert("Enter valid deposit amount");
+        return;
+      }
+      account.deposit(amt);
+      updateBalance();
+    }
+
+    function withdraw() {
+      const amt = Number(document.getElementById('withdrawAmount').value);
+      if(isNaN(amt) || amt <= 0) {
+        alert("Enter valid withdrawal amount");
+        return;
+      }
+      if(account.withdraw(amt)) {
+        updateBalance();
+      }
+    }
+
+    function updateBalance() {
+      document.getElementById('balance').innerText = account.getBalance();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arithmetic Operators - Interactive</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+<body>
+  <div class="childContainer">
+    <h1>Program For Arithmetic Operations</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Arithmetic Operators - Interactive&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Arithmetic Operations&lt;/h2&gt;
+
+  &lt;label&gt;Enter value for a:&lt;/label&gt;
+  &lt;input type=&quot;number&quot; class=&quot;input&quot; id=&quot;inputA&quot; placeholder=&quot;Enter number a&quot;&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;Enter value for b:&lt;/label&gt;
+  &lt;input type=&quot;number&quot; class=&quot;input&quot; id=&quot;inputB&quot; placeholder=&quot;Enter number b&quot;&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;button onclick=&quot;calculate()&quot;&gt;Calculate&lt;/button&gt;
+
+  &lt;pre id=&quot;result&quot;&gt;&lt;/pre&gt;
+
+  &lt;script&gt;
+    function calculate() {
+      const a = Number(document.getElementById('inputA').value);
+      const b = Number(document.getElementById('inputB').value);
+      const resultEl = document.getElementById('result');
+
+      if (isNaN(a) || isNaN(b)) {
+        resultEl.textContent = &quot;Please enter valid numbers for both a and b.&quot;;
+        return;
+      }
+
+      let output = &quot;&quot;;
+      output += `a + b = ${a + b}\n`;
+      output += `a - b = ${a - b}\n`;
+      output += `a * b = ${a * b}\n`;
+      output += `a / b = ${b !== 0 ? (a / b) : 'Division by zero error'}\n`;
+      output += `a % b = ${b !== 0 ? (a % b) : 'Modulo by zero error'}\n`;
+      output += `a ** 2 = ${a ** 2}\n`;
+
+      resultEl.textContent = output;
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Arithmetic Operations</h2>
+    
+    <label>Enter value for a:</label>
+    <input type="number" class="input" id="inputA" placeholder="Enter number a"><br><br>
+    
+    <label>Enter value for b:</label>
+    <input type="number" class="input" id="inputB" placeholder="Enter number b"><br><br>
+    
+    <button onclick="calculate()">Calculate</button>
+    
+    <pre id="result"></pre>
+  </div>
+
+  <script>
+    function calculate() {
+      const a = Number(document.getElementById('inputA').value);
+      const b = Number(document.getElementById('inputB').value);
+      const resultEl = document.getElementById('result');
+
+      if (isNaN(a) || isNaN(b)) {
+        resultEl.textContent = "Please enter valid numbers for both a and b.";
+        return;
+      }
+
+      let output = "";
+      output += `a + b = ${a + b}\n`;
+      output += `a - b = ${a - b}\n`;
+      output += `a * b = ${a * b}\n`;
+      output += `a / b = ${b !== 0 ? (a / b) : 'Division by zero error'}\n`;
+      output += `a % b = ${b !== 0 ? (a % b) : 'Modulo by zero error'}\n`;
+      output += `a ** 2 = ${a ** 2}\n`;
+
+      resultEl.textContent = output;
+    }
+  </script>
+</body>
+</html>

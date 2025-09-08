@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head><title>Student Class</title><link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css"></head>
+<body>
+  <div class="childContainer">
+    <h1>Program to calculate Student grades</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Student Class&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Student Grade Calculator&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;text&quot; id=&quot;studentName&quot; placeholder=&quot;Student Name&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;marks&quot; placeholder=&quot;Marks (0-100)&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;button onclick=&quot;showGrade()&quot;&gt;Calculate Grade&lt;/button&gt;
+&nbsp; &lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
+
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; class Student {
+&nbsp; &nbsp; &nbsp; constructor(name, marks) {
+&nbsp; &nbsp; &nbsp; &nbsp; this.name = name;
+&nbsp; &nbsp; &nbsp; &nbsp; this.marks = marks;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; getGrade() {
+&nbsp; &nbsp; &nbsp; &nbsp; if(this.marks &gt;= 90) return 'A';
+&nbsp; &nbsp; &nbsp; &nbsp; else if(this.marks &gt;= 75) return 'B';
+&nbsp; &nbsp; &nbsp; &nbsp; else if(this.marks &gt;= 60) return 'C';
+&nbsp; &nbsp; &nbsp; &nbsp; else if(this.marks &gt;= 40) return 'D';
+&nbsp; &nbsp; &nbsp; &nbsp; else return 'F';
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; function showGrade() {
+&nbsp; &nbsp; &nbsp; const name = document.getElementById('studentName').value;
+&nbsp; &nbsp; &nbsp; const marks = Number(document.getElementById('marks').value);
+&nbsp; &nbsp; &nbsp; if(name === &quot;&quot; || isNaN(marks) || marks &lt; 0 || marks &gt; 100) {
+&nbsp; &nbsp; &nbsp; &nbsp; alert(&quot;Enter valid name and marks&quot;);
+&nbsp; &nbsp; &nbsp; &nbsp; return;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; const student = new Student(name, marks);
+&nbsp; &nbsp; &nbsp; const output = `Name: ${student.name}\nMarks: ${student.marks}\nGrade: ${student.getGrade()}`;
+&nbsp; &nbsp; &nbsp; document.getElementById('output').innerText = output;
+&nbsp; &nbsp; }
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Student Grade Calculator</h2>
+    <input class="input" type="text" id="studentName" placeholder="Student Name"><br><br>
+    <input class="input" type="number" id="marks" placeholder="Marks (0-100)"><br><br>
+    <button onclick="showGrade()">Calculate Grade</button>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    class Student {
+      constructor(name, marks) {
+        this.name = name;
+        this.marks = marks;
+      }
+      getGrade() {
+        if(this.marks >= 90) return 'A';
+        else if(this.marks >= 75) return 'B';
+        else if(this.marks >= 60) return 'C';
+        else if(this.marks >= 40) return 'D';
+        else return 'F';
+      }
+    }
+
+    function showGrade() {
+      const name = document.getElementById('studentName').value;
+      const marks = Number(document.getElementById('marks').value);
+      if(name === "" || isNaN(marks) || marks < 0 || marks > 100) {
+        alert("Enter valid name and marks");
+        return;
+      }
+      const student = new Student(name, marks);
+      const output = `Name: ${student.name}\nMarks: ${student.marks}\nGrade: ${student.getGrade()}`;
+      document.getElementById('output').innerText = output;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head><title>Calculator Class</title><link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css"></head>
+<body>
+  <div class="childContainer">
+    <h1>Program to add/substract by using class</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Calculator Class&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Calculator: Add/Subtract&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;num1&quot; placeholder=&quot;Number 1&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;num2&quot; placeholder=&quot;Number 2&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;button onclick=&quot;calculate()&quot;&gt;Calculate&lt;/button&gt;
+&nbsp; &lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
+
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; class Calculator {
+&nbsp; &nbsp; &nbsp; add(a, b) { return a + b; }
+&nbsp; &nbsp; &nbsp; subtract(a, b) { return a - b; }
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; function calculate() {
+&nbsp; &nbsp; &nbsp; const a = Number(document.getElementById('num1').value);
+&nbsp; &nbsp; &nbsp; const b = Number(document.getElementById('num2').value);
+&nbsp; &nbsp; &nbsp; if(isNaN(a) || isNaN(b)) {
+&nbsp; &nbsp; &nbsp; &nbsp; alert(&quot;Enter valid numbers&quot;);
+&nbsp; &nbsp; &nbsp; &nbsp; return;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; const calc = new Calculator();
+&nbsp; &nbsp; &nbsp; const output = `Sum: ${calc.add(a,b)}\nDifference: ${calc.subtract(a,b)}`;
+&nbsp; &nbsp; &nbsp; document.getElementById('output').innerText = output;
+&nbsp; &nbsp; }
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Calculator: Add/Subtract</h2>
+    <input class="input" type="number" id="num1" placeholder="Number 1"><br><br>
+    <input class="input" type="number" id="num2" placeholder="Number 2"><br><br>
+    <button onclick="calculate()">Calculate</button>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    class Calculator {
+      add(a, b) { return a + b; }
+      subtract(a, b) { return a - b; }
+    }
+
+    function calculate() {
+      const a = Number(document.getElementById('num1').value);
+      const b = Number(document.getElementById('num2').value);
+      if(isNaN(a) || isNaN(b)) {
+        alert("Enter valid numbers");
+        return;
+      }
+      const calc = new Calculator();
+      const output = `Sum: ${calc.add(a,b)}\nDifference: ${calc.subtract(a,b)}`;
+      document.getElementById('output').innerText = output;
+    }
+  </script>
+</body>
+</html>

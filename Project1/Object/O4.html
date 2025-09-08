@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Check Property Existence</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+
+<body>
+  <div class="childContainer">
+    <h1>Program to check if an object has a specific property</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Check Property Existence&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Check if Object has Property&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;text&quot; id=&quot;checkPropInput&quot; placeholder=&quot;Property name to check&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;button onclick=&quot;checkProperty()&quot;&gt;Check&lt;/button&gt;
+&nbsp; &lt;p id=&quot;result&quot;&gt;&lt;/p&gt;
+
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; let person = {name: &quot;Emma&quot;, age: 28, city: &quot;Chicago&quot;};
+
+&nbsp; &nbsp; function checkProperty() {
+&nbsp; &nbsp; &nbsp; const prop = document.getElementById('checkPropInput').value.trim();
+&nbsp; &nbsp; &nbsp; const result = document.getElementById('result');
+&nbsp; &nbsp; &nbsp; if(prop === &quot;&quot;) {
+&nbsp; &nbsp; &nbsp; &nbsp; result.innerText = &quot;Please enter a property name.&quot;;
+&nbsp; &nbsp; &nbsp; &nbsp; return;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; if(person.hasOwnProperty(prop)) {
+&nbsp; &nbsp; &nbsp; &nbsp; result.innerText = `Property &quot;${prop}&quot; exists in the object.`;
+&nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; result.innerText = `Property &quot;${prop}&quot; does NOT exist in the object.`;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Check if Object has Property</h2>
+    <input class="input" type="text" id="checkPropInput" placeholder="Property name to check"><br><br>
+    <button onclick="checkProperty()">Check</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    let person = { name: "Emma", age: 28, city: "Chicago" };
+
+    function checkProperty() {
+      const prop = document.getElementById('checkPropInput').value.trim();
+      const result = document.getElementById('result');
+      if (prop === "") {
+        result.innerText = "Please enter a property name.";
+        return;
+      }
+      if (person.hasOwnProperty(prop)) {
+        result.innerText = `Property "${prop}" exists in the object.`;
+      } else {
+        result.innerText = `Property "${prop}" does NOT exist in the object.`;
+      }
+    }
+  </script>
+</body>
+
+</html>

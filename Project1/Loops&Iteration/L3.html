@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Do-While Loop Example</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+
+<body>
+  <div class="childContainer">
+    <h1>Program to show each character of a string using do-while loop</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Do-While Loop Example&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Show each character of string&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;text&quot; id=&quot;strInput&quot; placeholder=&quot;Enter a string&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;button onclick=&quot;printChars()&quot;&gt;Show Characters&lt;/button&gt;
+&nbsp; &lt;pre id=&quot;output&quot;&gt;&lt;/pre&gt;
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; function printChars() {
+&nbsp; &nbsp; &nbsp; let str = document.getElementById('strInput').value;
+&nbsp; &nbsp; &nbsp; let output = &quot;&quot;, i = 0;
+&nbsp; &nbsp; &nbsp; do {
+&nbsp; &nbsp; &nbsp; &nbsp; if(str.length === 0) break;
+&nbsp; &nbsp; &nbsp; &nbsp; output += str[i] + &quot;\n&quot;;
+&nbsp; &nbsp; &nbsp; &nbsp; i++;
+&nbsp; &nbsp; &nbsp; } while(i &lt; str.length);
+&nbsp; &nbsp; &nbsp; document.getElementById('output').textContent = output.trim();
+&nbsp; &nbsp; }
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Show each character of string</h2>
+    <input class="input" type="text" id="strInput" placeholder="Enter a string"><br><br>
+    <button onclick="printChars()">Show Characters</button>
+    <pre id="output"></pre>
+  </div>
+  <script>
+    function printChars() {
+      let str = document.getElementById('strInput').value;
+      let output = "", i = 0;
+      do {
+        if (str.length === 0) break;
+        output += str[i] + "\n";
+        i++;
+      } while (i < str.length);
+      document.getElementById('output').textContent = output.trim();
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Variable Reassignment</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+
+<body>
+  <div class="childContainer">
+    <h1>Program to demonstrate variable reassignment and dynamic typing in JavaScript</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Variable Reassignment&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h2&gt;Variable reassignment demonstrating dynamic typing:&lt;/h2&gt;
+  &lt;script&gt;
+    let data = 5;
+    document.write(&quot;Data initially: &quot; + data + &quot; (&quot; + typeof data + &quot;)&lt;br&gt;&quot;);
+
+    data = &quot;Now a string&quot;;
+    document.write(&quot;Data now: &quot; + data + &quot; (&quot; + typeof data + &quot;)&lt;br&gt;&quot;);
+
+    data = true;
+    document.write(&quot;Data finally: &quot; + data + &quot; (&quot; + typeof data + &quot;)&lt;br&gt;&quot;);
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+  </pre>
+    </section>
+    <br>
+    <h2>Variable reassignment demonstrating dynamic typing:</h2>
+    <script>
+      let data = 5;
+      document.write("Data initially: " + data + " (" + typeof data + ")<br>");
+      
+      data = "Now a string";
+      document.write("Data now: " + data + " (" + typeof data + ")<br>");
+      
+      data = true;
+      document.write("Data finally: " + data + " (" + typeof data + ")<br>");
+    </script>
+  </div>
+</body>
+
+</html>

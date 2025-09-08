@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sort Array</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+<body>
+  <div class="childContainer">
+    <h1>Program to sort array item alphabetically</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&nbsp; &lt;title&gt;Sort Array&lt;/title&gt;
+&nbsp; &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Sort Array Items Alphabetically&lt;/h2&gt;
+&nbsp; &lt;p&gt;Array before sort:&lt;/p&gt;
+&nbsp; &lt;ul id=&quot;beforeSort&quot;&gt;&lt;/ul&gt;
+&nbsp; &lt;p&gt;Array after sort:&lt;/p&gt;
+&nbsp; &lt;ul id=&quot;afterSort&quot;&gt;&lt;/ul&gt;
+
+
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; let arr = ['orange', 'apple', 'banana', 'grape'];
+&nbsp; &nbsp; function displayList(listID, items) {
+&nbsp; &nbsp; &nbsp; const list = document.getElementById(listID);
+&nbsp; &nbsp; &nbsp; list.innerHTML = '';
+&nbsp; &nbsp; &nbsp; items.forEach(item =&gt; {
+&nbsp; &nbsp; &nbsp; &nbsp; const li = document.createElement('li');
+&nbsp; &nbsp; &nbsp; &nbsp; li.textContent = item;
+&nbsp; &nbsp; &nbsp; &nbsp; list.appendChild(li);
+&nbsp; &nbsp; &nbsp; });
+&nbsp; &nbsp; }
+&nbsp; &nbsp; function sortArray() {
+&nbsp; &nbsp; &nbsp; displayList('beforeSort', arr);
+&nbsp; &nbsp; &nbsp; let sorted = [...arr].sort();
+&nbsp; &nbsp; &nbsp; displayList('afterSort', sorted);
+&nbsp; &nbsp; }
+&nbsp; &nbsp; sortArray();
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+
+    <h2>Sort Array Items Alphabetically</h2>
+    <p>Array before sort:</p>
+    <ul id="beforeSort"></ul>
+    <p>Array after sort:</p>
+    <ul id="afterSort"></ul>
+  </div>
+
+  <script>
+    let arr = ['orange', 'apple', 'banana', 'grape'];
+    function displayList(listID, items) {
+      const list = document.getElementById(listID);
+      list.innerHTML = '';
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        list.appendChild(li);
+      });
+    }
+    function sortArray() {
+      displayList('beforeSort', arr);
+      let sorted = [...arr].sort();
+      displayList('afterSort', sorted);
+    }
+    sortArray();
+  </script>
+</body>
+</html>

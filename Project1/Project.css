@@ -1,0 +1,201 @@
+* {
+  background-color: #8ecae6;
+  color: #ccdad1;
+}
+
+body {
+  text-align: center;
+  transition: background-color 0.6s, color 0.6s;
+}
+
+h1, h2, p, ul, li, #balance, label {
+  background-color: #219ebc;
+  color: #eee;
+}
+
+.container {
+  background-color: #219ebc;
+  color: #eee;
+  padding: 32px; /* Adds space inside div, pushes table inward */
+  border: 2px solid #eee; /* Example border for container */
+  width: max-content; /* Container fits content */
+  margin: auto;
+  border-radius: 10px;
+}
+
+table,
+td,
+th {
+  background-color: #023047;
+}
+
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: max-content;
+  margin: auto;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+
+/* Link group effect */
+.link-group {
+  position: relative;
+  height: 1.5em; /* Height for one link */
+  overflow: hidden;
+  transition: height 0.99s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-group a {
+  background-color: #023047;
+  color: #eee;
+  text-decoration: none;
+  padding-bottom: 10px;
+  display: block;
+  margin-bottom: 2px;
+  transition: opacity 0.4s;
+}
+.link-group a:not(:first-child) {
+  opacity: 0;
+  pointer-events: none;
+}
+.link-group:hover {
+  height: 10em; /* Enough for all links */
+  background: #023047;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.link-group:hover a {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* From Uiverse.io by mrhyddenn */
+button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+/* From Uiverse.io by Jaareet */
+.input {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 500;
+  font-size: 16;
+  color: #fff;
+  background-color: rgb(28, 28, 30);
+  box-shadow: 0 0 0.4vw rgba(0, 0, 0, 0.5), 0 0 0 0.15vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  padding: 0.4vw;
+  max-width: 190px;
+  transition: 0.4s;
+}
+
+.input:hover {
+  box-shadow: 0 0 0 0.15vw rgba(135, 207, 235, 0.186);
+}
+
+.input:focus {
+  box-shadow: 0 0 0 0.15vw skyblue;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.childContainer {
+  background-color: #219ebc;
+  color: #eee;
+  padding: 32px; /* Adds space inside div, pushes table inward */
+  border: 2px solid #eee; /* Example border for container */
+  width: max-content; /* Container fits content */
+  margin: auto;
+  border-radius: 10px;
+  text-align: left;
+}
+
+pre {
+  background-color: #023047;
+  color: #eee;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}

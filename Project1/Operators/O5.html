@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ternary Operator Interactive Example</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+<body>
+  <div class="childContainer">
+    <h1>Program to demonstrate Ternary Operator</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Ternary Operator Interactive Example&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Ternary Operator Example&lt;/h2&gt;
+  &lt;label&gt;Enter your age:&lt;/label&gt;
+  &lt;input type=&quot;number&quot; class=&quot;input&quot; id=&quot;ageInput&quot; placeholder=&quot;Enter age&quot; &gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+  &lt;button onclick=&quot;checkStatus()&quot;&gt;Check Status&lt;/button&gt;
+  &lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
+
+  &lt;script&gt;
+    function checkStatus() {
+      let age = Number(document.getElementById('ageInput').value);
+      if (isNaN(age) || age &lt; 0) {
+        document.getElementById('output').innerText = &quot;Please enter a valid age.&quot;;
+        return;
+      }
+      let status = age &gt;= 18 ? &quot;Adult&quot; : &quot;Minor&quot;;
+      document.getElementById('output').innerText = &quot;Age: &quot; + age + &quot;\nStatus: &quot; + status;
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Ternary Operator Example</h2>
+    <label>Enter your age:</label>
+    <input type="number" class="input" id="ageInput" placeholder="Enter age" ><br><br><br>
+    <button onclick="checkStatus()">Check Status</button>
+    <p id="output"></p>
+  </div>
+    
+  <script>
+    function checkStatus() {
+      let age = Number(document.getElementById('ageInput').value);
+      if (isNaN(age) || age < 0) {
+        document.getElementById('output').innerText = "Please enter a valid age.";
+        return;
+      }
+      let status = age >= 18 ? "Adult" : "Minor";
+      document.getElementById('output').innerText = "Age: " + age + "\nStatus: " + status;
+    }
+  </script>
+</body>
+
+</html>

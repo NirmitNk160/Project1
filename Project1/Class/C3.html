@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rectangle Class</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+
+<body>
+  <div class="childContainer">
+    <h1>
+      Program to calculate area & perimeter of a rectangle
+    </h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Rectangle Class&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Rectangle Area and Perimeter&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;width&quot; placeholder=&quot;Width&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;height&quot; placeholder=&quot;Height&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;button onclick=&quot;calculate()&quot;&gt;Calculate&lt;/button&gt;
+&nbsp; &lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
+
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; class Rectangle {
+&nbsp; &nbsp; &nbsp; constructor(width, height) {
+&nbsp; &nbsp; &nbsp; &nbsp; this.width = width;
+&nbsp; &nbsp; &nbsp; &nbsp; this.height = height;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; area() {
+&nbsp; &nbsp; &nbsp; &nbsp; return this.width * this.height;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; perimeter() {
+&nbsp; &nbsp; &nbsp; &nbsp; return 2 * (this.width + this.height);
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; function calculate() {
+&nbsp; &nbsp; &nbsp; const w = Number(document.getElementById('width').value);
+&nbsp; &nbsp; &nbsp; const h = Number(document.getElementById('height').value);
+&nbsp; &nbsp; &nbsp; if(isNaN(w) || isNaN(h) || w &lt;= 0 || h &lt;= 0) {
+&nbsp; &nbsp; &nbsp; &nbsp; alert(&quot;Enter valid positive numbers&quot;);
+&nbsp; &nbsp; &nbsp; &nbsp; return;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; const rect = new Rectangle(w, h);
+&nbsp; &nbsp; &nbsp; const output = `Area: ${rect.area()}\nPerimeter: ${rect.perimeter()}`;
+&nbsp; &nbsp; &nbsp; document.getElementById('output').innerText = output;
+&nbsp; &nbsp; }
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Rectangle Area and Perimeter</h2>
+    <input class="input" type="number" id="width" placeholder="Width"><br><br>
+    <input class="input" type="number" id="height" placeholder="Height"><br><br>
+    <button onclick="calculate()">Calculate</button>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    class Rectangle {
+      constructor(width, height) {
+        this.width = width;
+        this.height = height;
+      }
+      area() {
+        return this.width * this.height;
+      }
+      perimeter() {
+        return 2 * (this.width + this.height);
+      }
+    }
+
+    function calculate() {
+      const w = Number(document.getElementById('width').value);
+      const h = Number(document.getElementById('height').value);
+      if (isNaN(w) || isNaN(h) || w <= 0 || h <= 0) {
+        alert("Enter valid positive numbers");
+        return;
+      }
+      const rect = new Rectangle(w, h);
+      const output = `Area: ${rect.area()}\nPerimeter: ${rect.perimeter()}`;
+      document.getElementById('output').innerText = output;
+    }
+  </script>
+</body>
+
+</html>

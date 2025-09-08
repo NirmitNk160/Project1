@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Add Items to Array</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+
+<body>
+  <div class="childContainer">
+    <h1>Program to add items to an Array</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Add Items to Array&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Add Items to Array&lt;/h2&gt;
+  &lt;input class=&quot;input&quot; type=&quot;text&quot; id=&quot;itemInput&quot; placeholder=&quot;Enter item&quot;&gt;&lt;br&gt;&lt;br&gt;
+  &lt;button onclick=&quot;addItem()&quot;&gt;Add Item&lt;/button&gt;
+  &lt;p&gt;Array contents:&lt;/p&gt;
+  &lt;ul id=&quot;arrayList&quot;&gt;&lt;/ul&gt;
+
+
+  &lt;script&gt;
+    let arr = [];
+    function addItem() {
+      const item = document.getElementById('itemInput').value.trim();
+      if(item === &quot;&quot;) return;
+      arr.push(item);
+      document.getElementById('itemInput').value = &quot;&quot;;
+      displayArray();
+    }
+    function displayArray() {
+      const list = document.getElementById('arrayList');
+      list.innerHTML = &quot;&quot;;
+      arr.forEach((el, idx) =&gt; {
+        let li = document.createElement('li');
+        li.textContent = `${idx}: ${el}`;
+        list.appendChild(li);
+      });
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section>
+    <br>
+
+    <h1>Add Items to Array</h1>
+
+    <input class="input" type="text" id="itemInput" placeholder="Enter item"><br><br>
+    <button onclick="addItem()">Add Item</button>
+    <p>Array contents:</p>
+    <ul id="arrayList"></ul>
+  </div>
+  <script>
+    let arr = [];
+    function addItem() {
+      const item = document.getElementById('itemInput').value.trim();
+      if (item === "") return;
+      arr.push(item);
+      document.getElementById('itemInput').value = "";
+      displayArray();
+    }
+    function displayArray() {
+      const list = document.getElementById('arrayList');
+      list.innerHTML = "";
+      arr.forEach((el, idx) => {
+        let li = document.createElement('li');
+        li.textContent = `${idx}: ${el}`;
+        list.appendChild(li);
+      });
+    }
+  </script>
+</body>
+
+</html>

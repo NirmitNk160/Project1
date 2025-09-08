@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><title>Even Odd Function</title><link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css"></head>
+<body>
+  <div class="childContainer">
+    <h1>Program to check whether a number is even or odd using function</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Even Odd Function&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Check Even or Odd&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;val&quot; placeholder=&quot;Enter a number&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;button onclick=&quot;showEvenOdd()&quot;&gt;Check&lt;/button&gt;
+&nbsp; &lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; function isEven(n) {
+&nbsp; &nbsp; &nbsp; return n % 2 === 0 ? &quot;Even&quot; : &quot;Odd&quot;;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; function showEvenOdd() {
+&nbsp; &nbsp; &nbsp; const n = Number(document.getElementById('val').value);
+&nbsp; &nbsp; &nbsp; document.getElementById('output').innerText = n + &quot; is &quot; + isEven(n);
+&nbsp; &nbsp; }
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+  <h2>Check Even or Odd</h2>
+  <input class="input" type="number" id="val" placeholder="Enter a number"><br><br>
+  <button onclick="showEvenOdd()">Check</button>
+  <p id="output"></p>
+  </div>
+  <script>
+    function isEven(n) {
+      return n % 2 === 0 ? "Even" : "Odd";
+    }
+    function showEvenOdd() {
+      const n = Number(document.getElementById('val').value);
+      document.getElementById('output').innerText = n + " is " + isEven(n);
+    }
+  </script>
+</body>
+</html>

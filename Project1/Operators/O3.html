@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comparison Operators - Interactive</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+<body>
+  <div class="childContainer">
+    <h1>Program to demonstrate comparison operators</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Comparison Operators - Interactive&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Comparison Operators&lt;/h2&gt;
+  &lt;label for=&quot;xInput&quot;&gt;Enter value for x:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;xInput&quot; placeholder=&quot;Any value&quot; class=&quot;textInput input&quot;&gt;&lt;br&gt;&lt;br&gt;
+  &lt;label for=&quot;yInput&quot;&gt;Enter value for y:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;yInput&quot; placeholder=&quot;Any value&quot; class=&quot;textInput input&quot; &gt;&lt;br&gt;&lt;br&gt;
+  &lt;button onclick=&quot;compareValues()&quot;&gt;Compare&lt;/button&gt;
+  &lt;pre id=&quot;result&quot;&gt;&lt;/pre&gt;
+
+  &lt;script&gt;
+    function compareValues() {
+      let xRaw = document.getElementById('xInput').value;
+      let yRaw = document.getElementById('yInput').value;
+      const resultElem = document.getElementById('result');
+      // Try to convert x and y to number or boolean where appropriate
+      function convert(val) {
+        if(val.trim().toLowerCase() === &quot;true&quot;) return true;
+        else if(val.trim().toLowerCase() === &quot;false&quot;) return false;
+        else if(!isNaN(Number(val)) && val.trim() !== &quot;&quot;) return Number(val);
+        else return val;
+      }
+      let x = convert(xRaw);
+      let y = convert(yRaw);
+      let output = &quot;&quot;;
+      output += `x == y : ${x == y}\n`;          // loose equality
+      output += `x === y : ${x === y}\n`;        // strict equality
+      output += `x != y : ${x != y}\n`;          // loose inequality
+      output += `x !== y : ${x !== y}\n`;        // strict inequality
+      output += `x &gt; y : ${x &gt; y}\n`;
+      output += `x &lt; y : ${x &lt; y}\n`;
+      output += `x &gt;= y : ${x &gt;= y}\n`;
+      output += `x &lt;= y : ${x &lt;= y}\n`;
+      resultElem.textContent = output;
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>Comparison Operators</h2>
+    <label for="xInput">Enter value for x:</label>
+    <input type="text" id="xInput" placeholder="Any value" class="textInput input"><br><br>
+    <label for="yInput">Enter value for y:</label>
+    <input type="text" id="yInput" placeholder="Any value" class="textInput input" ><br><br>
+    <button onclick="compareValues()">Compare</button>
+    <pre id="result"></pre>
+  </div>
+
+  <script>
+    function compareValues() {
+      let xRaw = document.getElementById('xInput').value;
+      let yRaw = document.getElementById('yInput').value;
+      const resultElem = document.getElementById('result');
+      // Try to convert x and y to number or boolean where appropriate
+      function convert(val) {
+        if(val.trim().toLowerCase() === "true") return true;
+        else if(val.trim().toLowerCase() === "false") return false;
+        else if(!isNaN(Number(val)) && val.trim() !== "") return Number(val);
+        else return val;
+      }
+      let x = convert(xRaw);
+      let y = convert(yRaw);
+      let output = "";
+      output += `x == y : ${x == y}\n`;          // loose equality
+      output += `x === y : ${x === y}\n`;        // strict equality
+      output += `x != y : ${x != y}\n`;          // loose inequality
+      output += `x !== y : ${x !== y}\n`;        // strict inequality
+      output += `x > y : ${x > y}\n`;
+      output += `x < y : ${x < y}\n`;
+      output += `x >= y : ${x >= y}\n`;
+      output += `x <= y : ${x <= y}\n`;
+      resultElem.textContent = output;
+    }
+  </script>
+</body>
+</html>

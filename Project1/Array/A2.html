@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Remove Item from Array</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+
+<body>
+  <div class="childContainer">
+    <h1>Program to remove items by Index</h1>
+    <section>
+
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Remove Item from Array&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Remove Item by Index&lt;/h2&gt;
+  &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;indexInput&quot; placeholder=&quot;Enter index to remove&quot;&gt;&lt;br&gt;&lt;br&gt;
+  &lt;button onclick=&quot;removeItem()&quot;&gt;Remove&lt;/button&gt;
+  &lt;p&gt;Current array:&lt;/p&gt;
+  &lt;ul id=&quot;arrayList&quot;&gt;&lt;/ul&gt;
+
+
+  &lt;script&gt;
+    let arr = ['apple', 'banana', 'cherry' , 'mango' , 'orange','dragon fruit' , 'kivi'];
+    function displayArray() {
+      const list = document.getElementById('arrayList');
+      list.innerHTML = &quot;&quot;;
+      arr.forEach((el, idx) =&gt; {
+        let li = document.createElement('li');
+        li.textContent = `${idx}: ${el}`;
+        list.appendChild(li);
+      });
+    }
+    function removeItem() {
+      let index = Number(document.getElementById('indexInput').value);
+      if(index &gt;= 0 &amp;&amp; index &lt; arr.length) {
+        arr.splice(index,1);
+        displayArray();
+      } else {
+        alert(&quot;Invalid index&quot;);
+      }
+    }
+    displayArray();
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h1>Remove Item by Index</h1>
+    <input class="input" type="number" id="indexInput" placeholder="Enter index to remove"><br><br>
+    <button onclick="removeItem()">Remove</button>
+    <p>Current array:</p>
+    <ul id="arrayList"></ul>
+  </div>
+
+  <script>
+    let arr = ['apple', 'banana', 'cherry', 'mango', 'orange', 'dragon fruit', 'kivi'];
+    function displayArray() {
+      const list = document.getElementById('arrayList');
+      list.innerHTML = "";
+      arr.forEach((el, idx) => {
+        let li = document.createElement('li');
+        li.textContent = `${idx}: ${el}`;
+        list.appendChild(li);
+      });
+    }
+    function removeItem() {
+      let index = Number(document.getElementById('indexInput').value);
+      if (index >= 0 && index < arr.length) {
+        arr.splice(index, 1);
+        displayArray();
+      } else {
+        alert("Invalid index");
+      }
+    }
+    displayArray();
+  </script>
+</body>
+
+</html>

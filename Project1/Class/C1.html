@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Person Class</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+
+<body>
+  <div class="childContainer">
+    <h1>Program to create person ans show info</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Person Class&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Create Person and Show Info&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;text&quot; id=&quot;nameInput&quot; placeholder=&quot;Name&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;number&quot; id=&quot;ageInput&quot; placeholder=&quot;Age&quot;&gt;&lt;br&gt;&lt;br&gt;
+&nbsp; &lt;button onclick=&quot;createPerson()&quot;&gt;Create Person&lt;/button&gt;
+&nbsp; &lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
+
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; class Person {
+&nbsp; &nbsp; &nbsp; constructor(name, age) {
+&nbsp; &nbsp; &nbsp; &nbsp; this.name = name;
+&nbsp; &nbsp; &nbsp; &nbsp; this.age = age;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; info() {
+&nbsp; &nbsp; &nbsp; &nbsp; return `Name: ${this.name}, Age: ${this.age}`;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; function createPerson() {
+&nbsp; &nbsp; &nbsp; const name = document.getElementById('nameInput').value;
+&nbsp; &nbsp; &nbsp; const age = Number(document.getElementById('ageInput').value);
+&nbsp; &nbsp; &nbsp; if(name === &quot;&quot; || isNaN(age)) {
+&nbsp; &nbsp; &nbsp; &nbsp; alert(&quot;Please enter valid name and age&quot;);
+&nbsp; &nbsp; &nbsp; &nbsp; return;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; const person = new Person(name, age);
+&nbsp; &nbsp; &nbsp; document.getElementById('output').innerText = person.info();
+&nbsp; &nbsp; }
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    </section><br>
+
+    <h2>Create Person and Show Info</h2>
+    <input class="input" type="text" id="nameInput" placeholder="Name"><br><br>
+    <input class="input" type="number" id="ageInput" placeholder="Age"><br><br>
+    <button onclick="createPerson()">Create Person</button>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      info() {
+        return `Name: ${this.name}, Age: ${this.age}`;
+      }
+    }
+
+    function createPerson() {
+      const name = document.getElementById('nameInput').value;
+      const age = Number(document.getElementById('ageInput').value);
+      if (name === "" || isNaN(age)) {
+        alert("Please enter valid name and age");
+        return;
+      }
+      const person = new Person(name, age);
+      document.getElementById('output').innerText = person.info();
+    }
+  </script>
+</body>
+
+</html>

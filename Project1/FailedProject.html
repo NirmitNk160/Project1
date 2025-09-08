@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Expandable Rows in Column B</title>
+  <style>
+    #header1 {
+      text-align: center;
+      font-size: 60px;
+    }
+  </style>
+</head>
+
+<div>
+
+  <div id="header1">JavaScript Portal</div>
+  <div>
+    <select name="select" id="select">
+      <option>Core & Syntax</option>
+      <option>Variables & Data Types</option>
+      <option>Operators</option>
+      <option>Control Flow</option>
+      <option>Loops & Iteration</option>
+      <option>Functions</option>
+      <option>Objects</option>
+      <option>Arrays</option>
+      <option>Strings</option>
+      <option>Numbers</option>
+      <option>Advanced Concepts</option>
+      <option>Error Handling & Debugging</option>
+      <option>Regular Expressions</option>
+      <option>Browser APIs</option>
+      <option>Graphics & Multimedia</option>
+      <option>Data Structures</option>
+      <option>Security</option>
+      <option>Best Practices & Patterns</option>
+      <option>Server-side JS</option>
+      <option>Frameworks & Libraries</option>
+      <option>Basic programs</option>
+    </select>
+  </div>
+  <div>
+    <h1>What is JavaScript? History & Evolution</h1>
+    <p>JavaScript is a dynamic scripting language used primarily for creating interactive and complex features in web
+      pages and applications. It was developed in 1995 and has evolved into one of the most popular and influential
+      programming languages worldwide.
+    </p>
+    <p>
+    <h2>What is JavaScript?</h2>
+    </p>
+    <p>JavaScript enables the creation of interactive elements on web pages, such as animations, forms, and games. It
+      runs mainly in browsers, but also on servers (via technologies like Node.js), and follows multiple programming
+      paradigms, including object-oriented and functional styles.
+    <ul>
+      <li>Originally designed to be lightweight and interpreted for client-side scripting.
+      </li>
+      <li>Used for manipulating HTML and CSS, handling user input, and communicating with web servers.
+      </li>
+    </ul>
+    </p>
+    <p>
+    <h2>History</h2>
+    </p>
+    <p>
+    <ul>
+      <li>1995: Brendan Eich at Netscape creates JavaScript in just 10 days, initially called "Mocha," then
+        "LiveScript," and finally rebranded as "JavaScript" for marketing reasons.
+
+      </li>
+      <li>1996: Microsoft introduces JScript, its own JavaScript implementation for Internet Explorer, sparking the
+        browser wars.
+
+      </li>
+      <li>1997: JavaScript is submitted for standardization, resulting in ECMAScript 1 published by ECMA International
+        (the official specification for JavaScript).
+
+      </li>
+      <li>1999: ECMAScript 3 adds features like regular expressions and error handling.
+
+      </li>
+      <li>2005: AJAX emerges, revolutionizing dynamic web applications.</li>
+      <li>2008: Google Chrome launches, introducing the fast V8 JavaScript engine.
+
+      </li>
+      <li>2009: Node.js brings JavaScript to server-side programming.</li>
+      <li>Over the years, JavaScript gained advanced features—modules, classes, improved syntax, and modern standards
+        through ECMAScript updates up to ES2021.
+
+      </li>
+    </ul>
+    </p>
+    <p>
+    <h2>Evolution</h2>
+    </p>
+    <ul>
+      <li>JavaScript’s rapid adoption led to fragmentation (multiple browser implementations), resolved by ECMAScript
+        standardization.
+
+      </li>
+      <li>Modern JavaScript supports complex application development, async programming, functional paradigms, and has
+        an active ecosystem of frameworks (React, Angular, Vue).
+
+      </li>
+      <li>Server-side JavaScript (Node.js, Deno) expanded its reach beyond browsers.
+
+      </li>
+      <li>Today, JavaScript is a universal language for both client and server, powering most of the interactive web and
+        a growing number of non-browser applications.
+
+      </li>
+    </ul>JavaScript's continued evolution, led by the TC39 committee and ECMAScript standards, makes it a cornerstone of
+    modern software development.
+
+
+  </div>
+  <div>
+    <h1>ECMAScript & JavaScript Versions</h1>
+    <table border="1" cellpadding="7" style="width:100%; border-collapse:collapse; font-size:16px;">
+      <tr style="background:#eee;">
+        <th>Version</th>
+        <th>Year</th>
+        <th>Key Features</th>
+      </tr>
+      <tr>
+        <td>ES1</td>
+        <td>1997</td>
+        <td>First standardization.</td>
+      </tr>
+      <tr>
+        <td>ES2</td>
+        <td>1998</td>
+        <td>Editorial updates only.</td>
+      </tr>
+      <tr>
+        <td>ES3</td>
+        <td>1999</td>
+        <td>Regular expressions, try/catch, do-while, switch.</td>
+      </tr>
+      <tr>
+        <td>ES4</td>
+        <td>-</td>
+        <td>Abandoned, never standardized.</td>
+      </tr>
+      <tr>
+        <td>ES5</td>
+        <td>2009</td>
+        <td>Strict mode, array methods, JSON, getters/setters.</td>
+      </tr>
+      <tr>
+        <td>ES6 (ES2015)</td>
+        <td>2015</td>
+        <td>let/const, arrow functions, modules, classes.</td>
+      </tr>
+      <tr>
+        <td>ES7 (ES2016)</td>
+        <td>2016</td>
+        <td>Exponentiation (**), Array.includes()</td>
+      </tr>
+      <tr>
+        <td>ES8 (ES2017)</td>
+        <td>2017</td>
+        <td>Object.values(), async/await, string padding.</td>
+      </tr>
+      <tr>
+        <td>ES9 (ES2018)</td>
+        <td>2018</td>
+        <td>Spread/rest for objects, Promise.finally()</td>
+      </tr>
+      <tr>
+        <td>ES10 (ES2019)</td>
+        <td>2019</td>
+        <td>Array.flat(), Object.fromEntries(), String.trimStart/End()</td>
+      </tr>
+      <tr>
+        <td>ES11 (ES2020)</td>
+        <td>2020</td>
+        <td>Nullish Coalescing (??), Optional Chaining (?.)</td>
+      </tr>
+      <tr>
+        <td>ES12 (ES2021)</td>
+        <td>2021</td>
+        <td>Logical assignment, String.replaceAll(), WeakRefs</td>
+      </tr>
+      <tr>
+        <td>ES13+ (2022-2025)</td>
+        <td>2022-2025</td>
+        <td>Top-level await, new syntax and features</td>
+      </tr>
+    </table>
+    <p>Each ECMAScript version has modernized JavaScript with new syntax and capabilities for web, server, and
+      application development, keeping the language at the center of software engineering.</p>
+  </div>
+  <div>
+    <h1>JS file inclusion in HTML</h1>
+    <p>
+      To include a JavaScript file in an HTML document, use the <code>&lt;script&gt;</code> tag with the src attribute
+      specifying the path to the JavaScript file. Here is the basic syntax:
+    </p>
+    <p>
+    <pre><code>&lt;script src="path/to/your/script.js"&lt;&lt;/script&gt;</code></pre>
+    <ul>
+      <li><code>Place this tag either inside the <head> section or just before the closing </body> tag.</code></li>
+      <li>Example inside &lt;head&gt;:
+      </li>
+      <pre>
+      <code>
+        &lt;head>
+            &lt;script src="js/script.js">&lt;/script>
+        &lt;/head>
+      </code>
+      </pre>
+    </ul>
+    </p>
+  </div>
+  <div>
+
+  </div>
+  <script>
+
+  </script>
+  </body>
+
+</html>

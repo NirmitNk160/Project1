@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>List Object Properties</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+
+<body>
+  <div class="childContainer">
+    <h1>Program to list all properties and values of an object</h1>
+    <section>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;List Object Properties&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h2&gt;List Properties and Values&lt;/h2&gt;
+  &lt;button onclick=&quot;listProperties()&quot;&gt;Show All&lt;/button&gt;
+  &lt;ul id=&quot;list&quot;&gt;&lt;/ul&gt;
+
+  &lt;script&gt;
+    let person = { name: &quot;Gaurav&quot;, age: 17, city: &quot;Kalburgi&quot; };
+
+      function listProperties() {
+        const listEl = document.getElementById('list');
+        listEl.innerHTML = &quot;&quot;;
+        for (let key in person) {
+          let li = document.createElement('li');
+          li.innerText = `${key}: ${person[key]}`;
+          listEl.appendChild(li);
+        }
+      }
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+  </pre>
+    </section><br>
+    <h2>List Properties and Values</h2>
+    <button onclick="listProperties()">Show All</button>
+    <ul id="list"></ul>
+  </div>
+
+  <script>
+    let person = { name: "Gaurav", age: 17, city: "Kalburgi" };
+
+    function listProperties() {
+      const listEl = document.getElementById('list');
+      listEl.innerHTML = "";
+      for (let key in person) {
+        let li = document.createElement('li');
+        li.innerText = `${key}: ${person[key]}`;
+        listEl.appendChild(li);
+      }
+    }
+  </script>
+</body>
+
+</html>

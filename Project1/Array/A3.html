@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search in Array</title>
+  <link rel="stylesheet" href="/JavaScriptInVKC/Project1/Project.css">
+</head>
+<body>
+  <div class="childContainer">
+    <h1>Program to search an Element in an Array</h1>
+    <section><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&nbsp; &lt;title&gt;Search in Array&lt;/title&gt;
+&nbsp; &lt;link rel=&quot;stylesheet&quot; href=&quot;/JavaScriptInVKC/Project1/Project.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&nbsp; &lt;h2&gt;Search for an Item&lt;/h2&gt;
+&nbsp; &lt;input class=&quot;input&quot; type=&quot;text&quot; id=&quot;searchInput&quot; placeholder=&quot;Enter item to search&quot;&gt; &lt;br&gt;&lt;br&gt;
+&nbsp; &lt;button onclick=&quot;searchItem()&quot;&gt;Search&lt;/button&gt;
+&nbsp; &lt;p id=&quot;result&quot;&gt;&lt;/p&gt;
+
+
+&nbsp; &lt;script&gt;
+&nbsp; &nbsp; let arr = ['dog', 'cat', 'rabbit', 'parrot'];
+&nbsp; &nbsp; function searchItem() {
+&nbsp; &nbsp; &nbsp; let search = document.getElementById('searchInput').value.trim();
+&nbsp; &nbsp; &nbsp; let index = arr.indexOf(search);
+&nbsp; &nbsp; &nbsp; let result = document.getElementById('result');
+&nbsp; &nbsp; &nbsp; if(index !== -1) {
+&nbsp; &nbsp; &nbsp; &nbsp; result.textContent = `&quot;${search}&quot; found at index ${index}`;
+&nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; result.textContent = `&quot;${search}&quot; not found in the array`;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+&nbsp; &nbsp; 
+&nbsp; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre></section><br>
+
+    <h1>Search for an Item</h1>
+    <input class="input" type="text" id="searchInput" placeholder="Enter item to search"> <br><br>
+    <button onclick="searchItem()">Search</button>
+    <p id="result"></p>
+  </div>
+    
+  <script>
+    let arr = ['dog', 'cat', 'rabbit', 'parrot'];
+    function searchItem() {
+      let search = document.getElementById('searchInput').value.trim();
+      let index = arr.indexOf(search);
+      let result = document.getElementById('result');
+      if(index !== -1) {
+        result.textContent = `"${search}" found at index ${index}`;
+      } else {
+        result.textContent = `"${search}" not found in the array`;
+      }
+    }
+    
+  </script>
+</body>
+</html>
